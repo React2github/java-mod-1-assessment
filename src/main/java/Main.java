@@ -38,22 +38,23 @@ public class Main {
         }
 
         // Game logic 
-        
+
         Random random = new Random();
         int value = random.nextInt(max + min) + min;
 
         try (Scanner obj = new Scanner(System.in)) {
             System.out.println("Welcome Guest!");
-            System.out.print("Do you want to play on easy - 0, medium - 1, or hard - 2? (0-2) ");
+            System.out.print("Do you want to play on easy(0), medium(1), or hard(2)? ");
             int userDifficulty = obj.nextInt();
-            System.out.println("You choose " + userDifficulty);
+            String[] Levels = {"easy", "medium", "hard"};
+            System.out.println("You choose " + Levels[userDifficulty]);
 
-            String[] levels = {
-                    "Easy - User wins if you guess higher or same as Computer",
-                    "Medium - User wins if you guess higher than computer",
-                    "Hard - User wins if you guess exactly as computer" };
+            String[] Instructions = {
+                    "User wins if you guess higher or same as Computer",
+                    "User wins if you guess higher than Computer",
+                    "User wins if you guess exactly as Computer" };
 
-            System.out.println(levels[userDifficulty]);
+            System.out.println(Instructions[userDifficulty]);
 
             if (userDifficulty > 2 || userDifficulty < 0) {
                 System.out.println("Pick a number within range!");
