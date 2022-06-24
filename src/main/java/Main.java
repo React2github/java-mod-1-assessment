@@ -25,15 +25,11 @@ public class Main {
         for (int y = 0; y < height; y++) {
             StringBuilder sb = new StringBuilder();
             for (int x = 0; x < width; x++) {
-
                 sb.append(image.getRGB(x, y) == -16777216 ? " " : "#");
-
             }
-
             if (sb.toString().trim().isEmpty()) {
                 continue;
             }
-
             System.out.println(sb);
         }
 
