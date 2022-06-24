@@ -64,9 +64,9 @@ public class Main {
                 System.out.println("Your answer is the same. You Won!");
             } else if (userNumber == value && userDifficulty == 1) {
                 System.out.println("Your answer is the same. Computer Wins!");
-            } else if (userNumber < value) {
+            } else if (userNumber < value && userNumber > 0) {
                 System.out.println("Your answer was too low. Computer Wins!");
-            } else if (userNumber > 10 && userNumber > value) {
+            } else if (userNumber > 10 || userNumber < 0 && userNumber > value || userNumber < value) {
                 System.out.println("Number outside range");
             } else if (userNumber > value && userDifficulty == 2) {
                 System.out.println("Your answer was too high. Computer Wins!");
