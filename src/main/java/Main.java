@@ -20,7 +20,7 @@ public class Main {
                 RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
         graphics.drawString("Guess the #", 20, 20);
 
-        // ImageIO.write(image, "png", new File("/users/mkyong/ascii-art.png"));
+        // Ascii Art section;
 
         for (int y = 0; y < height; y++) {
             StringBuilder sb = new StringBuilder();
@@ -37,6 +37,8 @@ public class Main {
             System.out.println(sb);
         }
 
+        // Game logic 
+        
         Random random = new Random();
         int value = random.nextInt(max + min) + min;
 
