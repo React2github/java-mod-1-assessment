@@ -43,12 +43,12 @@ public class Main {
             System.out.print("Do you want to play on easy(0), medium(1), or hard(2)? ");
             int userDifficulty = obj.nextInt();
             String[] Levels = {"easy", "medium", "hard"};
-            System.out.println("You choose " + Levels[userDifficulty]);
+            System.out.print("You choose " + Levels[userDifficulty] + ".");
 
             String[] Instructions = {
-                    "User wins if you guess higher or same as Computer",
-                    "User wins if you guess higher than Computer",
-                    "User wins if you guess exactly as Computer" };
+                    " User wins if you guess higher or same as Computer",
+                    " User wins if you guess higher than Computer",
+                    " User wins if you guess exactly as Computer" };
 
             System.out.println(Instructions[userDifficulty]);
 
@@ -64,7 +64,7 @@ public class Main {
                 System.out.println("Your answer is the same. You Won!");
             } else if (userNumber == value && userDifficulty == 1) {
                 System.out.println("Your answer is the same. Computer Wins!");
-            } else if (userNumber < value && userNumber > 0) {
+            } else if (userNumber < value && userNumber >= 0) {
                 System.out.println("Your answer was too low. Computer Wins!");
             } else if (userNumber > 10 || userNumber < 0 && userNumber > value || userNumber < value) {
                 System.out.println("Number outside range");
